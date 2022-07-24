@@ -6,7 +6,6 @@ import Footer from './components/Footer'
 import About from './components/About'
 import Contact from './components/Contact'
 import Work from './components/Work'
-import Resume from './components/Resume'
 import Home from './components/Home'
 
 
@@ -23,9 +22,6 @@ function App() {
     }
     if (currentPage === 'Work') {
       return <Work />
-    }
-    if (currentPage === 'Resume') {
-      return <Resume />
     }
     else {
       return <Contact/>

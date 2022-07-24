@@ -65,3 +65,5 @@ function Work() {
         </section>
     )
 }
+
+export default Work

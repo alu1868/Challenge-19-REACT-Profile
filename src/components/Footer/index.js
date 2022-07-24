@@ -7,17 +7,14 @@ function Footer() {
     return (
             <div>
                 {/* Linkedin Link */}
-                <a href="">
+                <p>//Linkedin Link//</p>
 
                 {/* Github Link */}
-                </a>
-                <a href="">
+                <p>//Github Link//</p>
 
                 {/* Resume PDF */}
-                </a>
-                <a href="">
-
-                </a>
+                <p>//resume link//</p>
+                
 
                 <div className="copyright">
                     &copy; Alexander Lu
