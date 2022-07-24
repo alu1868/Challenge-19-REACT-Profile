@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import validateEmail from "../../utils/email-validate"
 
 function Contact() {
 
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
     const handleInputChange = (event) => {
         // Get the value and name of the input which triggered the change
@@ -14,9 +15,9 @@ function Contact() {
         const inputValue = target.value;
 
         // Based on the input type, set the state to equal the inputValue (target.value)
-        if (inputType === 'name') {
+        if (inputType === "name") {
             setName(inputValue);
-        } else if (inputType === 'email') {
+        } else if (inputType === "email") {
             setEmail(inputValue);
         } else {
             setMessage(inputValue);
@@ -35,13 +36,63 @@ function Contact() {
             alert('Your message was submitted successfully! Thank you!');
         }
         // If successful, clear the inputs
-        setName('');
-        setEmail('');
-        setMessage('');
+        setName("");
+        setEmail("");
+        setMessage("");
     }
 
     return (
-        
+        <div>
+            <div>
+                {/* Contact me message */}
+                <div>
+                    <p>Feel free to reach out to me at: alu1868@gmail.com</p>
+                </div>
+
+                {/* contact form */}
+                <form>
+                    {/* Input Name */}
+                    <input
+                    value={name}
+                    name="name"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="name"
+                    className="input"
+                    />
+
+                    {/* input Sender Email */}
+                    <input
+                    value={email}
+                    name="email"
+                    onChange={handleInputChange}
+                    type="email"
+                    placeholder="email"
+                    className="input"
+                    />
+
+                    {/* Input Message */}
+                    <textarea
+                    value={message}
+                    name="message"
+                    onChange={handleInputChange}
+                    type="text"
+                    placeholder="message"
+                    className="input textarea"
+                    />
+
+                    <button type="submit" name="submit-button" onClick={handleFormSubmit}>
+                        SEND
+                    </button>
+                </form>
+                
+                {errorMessage && (
+                <div>
+                    <p className="error-text">{errorMessage}</p>
+                </div>
+                )}
+            </div>
+        </div>
     )
 }
 
