@@ -1,6 +1,5 @@
 import './App.css';
 import React, {useState} from 'react';
-import Header from './components/Header'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import About from './components/About'
@@ -11,38 +10,32 @@ import Home from './components/Home'
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState('Home')
+  const [currentPage, setCurrentPage] = useState();
 
+  // switch statement
   const renderPage = () => {
-    if (currentPage === 'Home') {
-      return <Home />;
-    }
     if (currentPage === 'About') {
       return <About />;
     }
     if (currentPage === 'Work') {
-      return <Work />
+      return <Work />;
     }
-    else {
-      return <Contact/>
+    if (currentPage === 'Contact') {
+      return <Contact />;
     }
+    return <Home />;
   }
 
   const handlePageChange = (page) => setCurrentPage(page)
 
   return (
-    <div>
-      <div>
-        <Nav currentPage={currentPage} handlepageChange={handlePageChange} />
-      </div>
-      <div>
-        <Header></Header>
-      </div>
-      <main>
+    <div className="flex-wrapper">
+      <div className="App">
+        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
         {renderPage()}
-      </main>
-      <div>
-        <Footer></Footer>
+        <main>
+        </main>
+        <footer><Footer /></footer>
       </div>
     </div>
   );

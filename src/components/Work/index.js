@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "../Project"
+
 
 function Work() {
     const projectArray = [
@@ -57,9 +57,7 @@ function Work() {
         <section>
             <div>
                 <div>
-                {projectArray.map((project) => 
-                    <Project image={project.image} name={project.name} description={project.description} url={project.url} />
-                  )}
+                
                 </div>
             </div>
         </section>

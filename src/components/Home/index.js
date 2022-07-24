@@ -15,7 +15,7 @@ function About() {
                 <div>
                     {/* Icon */}
                     <div>
-                        <h2>Problem Solving</h2>
+                        
                     </div>
                     {/* Description */}
                     <div>
