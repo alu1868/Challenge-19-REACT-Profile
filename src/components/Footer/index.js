@@ -1,5 +1,5 @@
 import React from "react";
-import linkedInIcon from "../../../src/assets/img/linkedin-icon.png";
+import linkedInIcon from "../../../src/assets/images/linkedin-icon.png";
 import githubIcon from "../../../src/assets/img/github-icon.png";
 import documentIcon from "../../../src/assets/img/document-icon.png";
 
