@@ -3,6 +3,7 @@ import Brain from "../../assets/images/brain-icon.png";
 import Gear from "../../assets/images/gear-icon.png";
 import Student from "../../assets/images/student-icon.png";
 import Team from "../../assets/images/team-icon.png";
+import self from "../../assets/images/self-portrait.jpg"
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -12,15 +13,19 @@ function About() {
 
     return (
         <Container>
+                <Row>
+                    <h1>Hi, You can call me Alex!</h1>
+                    <img src={self} alt="Alexander Lu"></img>
+                </Row>
 
                 <Row>
                     <Col>
-                            <h2>Problem Solving</h2>
-                            <img src={Brain} alt="networking minds"></img>
+                        <h2>Problem Solving</h2>
+                        <img src={Brain} alt="networking minds"></img>
                     </Col>
                     <Col>
-                            <p>With my completion of the Full Stack Coding Bootcamp from the University of Texas, I have been equipped with relevant coding skills and mindset to pursue an unknown ocean of knowledge.</p>
-                            <p>That means being ready for failure and learning from mistakes, nothing beats finding an issue and optimizing the solutions.</p>
+                        <p>With my completion of the Full Stack Coding Bootcamp from the University of Texas, I have been equipped with relevant coding skills and mindset to pursue an unknown ocean of knowledge.</p>
+                        <p>That means being ready for failure and learning from mistakes, nothing beats finding an issue and optimizing the solutions.</p>
                     </Col>
                 </Row>
                 

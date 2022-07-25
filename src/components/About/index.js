@@ -1,5 +1,5 @@
 import React from "react";
-import self from "../../assets/images/self-portrait.jpg"
+import self from "../../assets/images/About-me.jpg"
 import Resume from "../../assets/resume/Alexander-Lu-Resume.pdf"
 import documentImage from "../../assets/images/document-icon-large.png"
 
