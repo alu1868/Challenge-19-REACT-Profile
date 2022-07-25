@@ -1,28 +1,37 @@
 import React from "react";
 
 function Nav({ currentPage, handlePageChange }) {
-    return(
+    return (
         <header>
             <nav>
                 <ul>
-                    {/* Home Section */}
+                    {/* HOME BUTTON */}
                     <li>
-                        <a href="#Home">Home</a>
+                        <a href="#resume"
+                        onClick={() => handlePageChange("Resume")}
+                        className={currentPage === "Resume" ? "nav-link active" : "nav-link"}>
+                            Resume</a>
                     </li>
-
-                    {/* About Section */}
+                    {/* ABOUT ME SECTION */}
                     <li>
-                        <a href="#About">About Me</a>
+                        <a href="#about"
+                        onClick={() => handlePageChange("About")}
+                        className={currentPage === "About" ? "nav-link active" : "nav-link"}>
+                            About Me</a>
                     </li>
-
-                    {/* Work Section */}
+                    {/* MY WORK SECTION */}
                     <li>
-                        <a href="#Work">Work</a>
+                        <a href="#Work"
+                        onClick={() => handlePageChange("Work")}
+                        className={currentPage === "Work" ? "nav-link active" : "nav-link"}>
+                            Work</a>
                     </li>
-
-                    {/* Contact Section */}
+                    {/* CONTACT SECTION */}
                     <li>
-                        <a href="#Contact">Contact Me</a>
+                        <a href="#contact"
+                        onClick={() => handlePageChange("Contact")}
+                        className={currentPage === "Contact" ? "nav-link active" : "nav-link"}>
+                            Contact</a>
                     </li>
                 </ul>
             </nav>

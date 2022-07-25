@@ -42,58 +42,31 @@ function Contact() {
     }
 
     return (
-        <div>
-            <div>
-                {/* Contact me message */}
+        <section id="contact-info" className="contact-me">
+            <div className="contact">
+                <p className="section-title">Shoot me an email at:  <a href="mailto:alu1868@gmail.com">alu1868@gmail.com</a></p>
+            </div>
+            <form className="contact-form">
                 <div>
-                    <p>Feel free to reach out to me at: alu1868@gmail.com</p>
+                    <label htmlFor="name">Name:    </label>
+                    <input type="text" name="name" value={name} onChange={handleInputChange} />
+                </div> <div>
+                    <label htmlFor="email">E-mail:    </label>
+                    <input type="email" name="email" value={email} onChange={handleInputChange} />
                 </div>
-
-                {/* contact form */}
-                <form>
-                    {/* Input Name */}
-                    <input
-                    value={name}
-                    name="name"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="name"
-                    className="input"
-                    />
-
-                    {/* input Sender Email */}
-                    <input
-                    value={email}
-                    name="email"
-                    onChange={handleInputChange}
-                    type="email"
-                    placeholder="email"
-                    className="input"
-                    />
-
-                    {/* Input Message */}
-                    <textarea
-                    value={message}
-                    name="message"
-                    onChange={handleInputChange}
-                    type="text"
-                    placeholder="message"
-                    className="input textarea"
-                    />
-
-                    <button type="submit" name="submit-button" onClick={handleFormSubmit}>
-                        SEND
-                    </button>
-                </form>
-                
-                {errorMessage && (
+                <div>
+                    <label htmlFor="message">Message: </label>
+                    <textarea name="name" value={message} onChange={handleInputChange}/>
+                </div>
+                <button type="submit" onClick={handleFormSubmit} onChange={handleInputChange}>Submit</button>
+            </form>
+            {errorMessage && (
                 <div>
                     <p className="error-text">{errorMessage}</p>
                 </div>
-                )}
-            </div>
-        </div>
-    )
+            )}
+        </section>
+    );
 }
 
 export default Contact
