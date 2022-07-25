@@ -7,6 +7,10 @@ import Contact from './components/Contact'
 import Work from './components/Work'
 import Home from './components/Home'
 
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+
+
 
 function App() {
 

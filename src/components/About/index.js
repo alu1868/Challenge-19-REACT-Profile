@@ -1,5 +1,9 @@
 import React from "react";
 import self from "../../assets/images/self-portrait.jpg"
+import Resume from "../../assets/resume/Alexander-Lu-Resume.pdf"
+import documentImage from "../../assets/images/document-icon-large.png"
+
+
 
 function About() {
 
@@ -20,34 +24,12 @@ function About() {
             {/* Technologies */}
             <div>
                 <div>
-                    <h3>Technologies</h3>
+                    <h3>Checkout My Resume Below!</h3>
                 </div>
                 <div>
-                    <ul>
-                        <li>
-                            <h3>JavaScript</h3>
-                        </li>
-
-                        <li>
-                            <h3>Node JS</h3>
-                        </li>
-
-                        <li>
-                            <h3>MONGO DB</h3>
-                        </li>
-
-                        <li>
-                            <h3>MySQL</h3>
-                        </li>
-
-                        <li>
-                            <h3>HTML + CSS</h3>
-                        </li>
-
-                        <li>
-                            <h3>React JS</h3>
-                        </li>
-                    </ul>
+                    <a href={Resume}>
+                        <img src={documentImage} alt="Generic Document Icon" />
+                    </a>
                 </div>
             </div>
         </div>
